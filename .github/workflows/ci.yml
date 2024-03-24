@@ -28,8 +28,10 @@ jobs:
           CHROME_OPTIONS: --remote-allow-origins=*;--disable-gpu;--no-sandbox;--disable-dev-shm-usage;--headless=new;--window-size=1920,1080
           CI_RUN: true
 
-      - name: Test report
-        uses: EnricoMi/publish-unit-test-result-action@v2.15.1
-        if: always()
+      - name: Create test report
+        uses: dorny/paths-filter@v3
+        if: success() || failure()
         with:
-          files: target/surefire-reports/*.xml
+          name: Unit tests Report
+          path: target/surefire-reports/TEST-*.xml
+          reporter: java-junit
