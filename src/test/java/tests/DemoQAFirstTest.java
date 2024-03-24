@@ -8,7 +8,7 @@ public class DemoQAFirstTest extends BaseTest {
 
     @Test
     public void navigationTest() {
-        final String expectedTitle = "DEMOQA1";
+        final String expectedTitle = "DEMOQA";
         getDriver().get("https://demoqa.com/");
 
         Assert.assertEquals(getDriver().getTitle(), expectedTitle);

@@ -41,10 +41,6 @@ jobs:
         if: failure()
         with:
           name: screenshots-and-report
-#          path: |
-#            screenshots
-#            target/surefire-reports/emailable-report.html
-
-#          name: Unit tests Report
-          path: target/surefire-reports/TEST-*.xml
-#          reporter: java-junit
+          path: |
+            screenshots
+            target/surefire-reports/emailable-report.html
