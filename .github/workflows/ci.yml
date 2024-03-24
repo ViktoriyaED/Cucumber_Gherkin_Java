@@ -43,4 +43,4 @@ jobs:
           name: screenshots-and-report
           path: |
             screenshots
-            target/surefire-reports/emailable-report.html
+#            target/surefire-reports/emailable-report.html
