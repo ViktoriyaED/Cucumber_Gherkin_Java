@@ -20,6 +20,9 @@ public abstract class BaseTest {
 
     @BeforeMethod
     protected void beforeMethod() {
+        // start the driver
+
+
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-dev-shm-usage");
@@ -27,11 +30,13 @@ public abstract class BaseTest {
         chromeOptions.addArguments("--remote-allow-origin=*");
         chromeOptions.addArguments("--window-size=1920,1080");
         driver = new ChromeDriver(chromeOptions);
-//        driver.manage().timeouts().implicitlyWait(120, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(120, TimeUnit.MILLISECONDS);
     }
 
     @AfterMethod
     protected void afterMethod() {
+        // close the driver
+
         if (driver != null) {
             driver.quit();
         }
