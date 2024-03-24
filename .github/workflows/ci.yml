@@ -35,7 +35,6 @@ jobs:
           name: Maven Tests
           path: target/surefire-reports/TEST-*.xml
           reporter: java-junit
-          fail-on-error: true
 
       - name: Attach artifacts on failure
         uses: actions/upload-artifact@v4
