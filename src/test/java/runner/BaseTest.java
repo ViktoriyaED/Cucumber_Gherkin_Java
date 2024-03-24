@@ -23,14 +23,14 @@ public abstract class BaseTest {
         // start the driver
 
 
-//        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.addArguments("--no-sandbox");
-//        chromeOptions.addArguments("--disable-dev-shm-usage");
-//        chromeOptions.addArguments("--headless");
-//        chromeOptions.addArguments("--remote-allow-origin=*");
-//        chromeOptions.addArguments("--window-size=1920,1080");
-//        driver = new ChromeDriver(chromeOptions);
-//        driver.manage().timeouts().implicitlyWait(120, TimeUnit.MILLISECONDS);
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--remote-allow-origin=*");
+        chromeOptions.addArguments("--window-size=1920,1080");
+        driver = new ChromeDriver(chromeOptions);
+        driver.manage().timeouts().implicitlyWait(120, TimeUnit.MILLISECONDS);
     }
 
     @AfterMethod

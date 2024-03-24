@@ -36,9 +36,11 @@ jobs:
           path: target/surefire-reports/TEST-*.xml
           reporter: java-junit
 
-      - name: Attach screenshots
+      - name: Attach screenshots and reports
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: my-artifact
-          path: screenshots
+          name: screenshots-and-report
+          path: |
+            screenshots
+            target/surefire-reports/emailable-report.html
