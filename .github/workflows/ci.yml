@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: screenshots-and-report
+          name: Screenshots-and-report
           path: |
             screenshots
             target/surefire-reports/emailable-report.html
