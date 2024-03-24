@@ -41,6 +41,4 @@ jobs:
         if: failure()
         with:
           name: screenshots-and-report
-          path: |
-            screenshots
-#            target/surefire-reports/emailable-report.html
+          path: target/surefire-reports
